@@ -1,0 +1,103 @@
+﻿
+@{
+    ViewData["Title"] = "OyuncuEloBelirle";
+    Layout = "~/Views/Shared/_KullanıciLayout.cshtml";
+}
+<head>
+    <title>Oyuncu Elo Belirle</title>
+    <link rel="stylesheet" href="~/kullanıcı/css/elobelirle.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Content Wrapper -->
+        <div class="content-wrapper">
+            <main class="comparison-content">
+                <section class="comparison-selection">
+                    <h2>Oyuncu Karşılaştırma ve Elo Belirleme</h2>
+                    <div class="player-comparison">
+                        <!-- Birinci Oyuncu -->
+                        <div class="player-card">
+                            <div class="player-photo-container">
+                                <div class="player-photo" id="player1-photo"></div>
+                            </div>
+                            <div class="player-info">
+                                <p>Mevcut Elo: <span id="player1-elo">-</span></p>
+                                <p>Takım: <span id="player1-team">-</span></p>
+                            </div>
+                            <div class="player-stats">
+                                <h3>Oyuncu İstatistikleri</h3>
+                                <div class="stats-grid">
+                                    <div class="stat-item">
+                                        <i class="fas fa-futbol"></i>
+                                        <span class="stat-label">Gol</span>
+                                        <span class="stat-value" id="player1-goals">-</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <i class="fas fa-shoe-prints"></i>
+                                        <span class="stat-label">Asist</span>
+                                        <span class="stat-value" id="player1-assists">-</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span class="stat-label">Maç Sayısı</span>
+                                        <span class="stat-value" id="player1-matches">-</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <i class="fas fa-running"></i>
+                                        <span class="stat-label">Pozisyon</span>
+                                        <span class="stat-value" id="player1-position">-</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- VS İşareti -->
+                        <div class="vs-container">
+                            <div class="vs-circle">
+                                <span>VS</span>
+                            </div>
+                        </div>
+
+                        <!-- İkinci Oyuncu -->
+                        <div class="player-card">
+                            <div class="player-photo-container">
+                                <div class="player-photo" id="player2-photo"></div>
+                            </div>
+                            <div class="player-info">
+                                <p>Mevcut Elo: <span id="player2-elo">-</span></p>
+                                <p>Takım: <span id="player2-team">-</span></p>
+                            </div>
+                            <div class="player-stats">
+                                <h3>Oyuncu İstatistikleri</h3>
+                                <div class="stats-grid">
+                                    <div class="stat-item">
+                                        <i class="fas fa-futbol"></i>
+                                        <span class="stat-label">Gol</span>
+                                        <span class="stat-value" id="player2-goals">-</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <i class="fas fa-shoe-prints"></i>
+                                        <span class="stat-label">Asist</span>
+                                        <span class="stat-value" id="player2-assists">-</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span class="stat-label">Maç Sayısı</span>
+                                        <span class="stat-value" id="player2-matches">-</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <i class="fas fa-running"></i>
+                                        <span class="stat-label">Pozisyon</span>
+                                        <span class="stat-value" id="player2-position">-</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        
+    </div>
+    <script src="~/kullanıcı/js/elobelirle.js"></script>
+</body>

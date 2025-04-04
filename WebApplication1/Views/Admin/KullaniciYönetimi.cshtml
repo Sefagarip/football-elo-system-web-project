@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewData["Title"] = "KullaniciYönetimi";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kullanıcı Yönetimi - Futbol Elo Sistemi</title>
+    <link rel="stylesheet" href="~/admin/css/admin-dashboard.css">
+    <link rel="stylesheet" href="~/admin/css/user-management.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<main class="main-content">
+    <header class="top-bar">
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Kullanıcı ara...">
+        </div>
+        <div class="user-menu">
+            <div class="notifications">
+                <i class="fas fa-bell"></i>
+                <span class="badge">3</span>
+            </div>
+            <div class="admin-profile">
+                <img src="../images/admin/admin-avatar.png" alt="Admin">
+                <span>Admin Adı</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="user-management-content">
+        <h3>Kullanıcı Listesi</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>İsim</th>
+                    <th>Email</th>
+                    <th>Durum</th>
+                    <th>İşlemler</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Ahmet Yılmaz</td>
+                    <td>ahmet@example.com</td>
+                    <td>Aktif</td>
+                    <td>
+                        <button class="edit-btn"><i class="fas fa-edit"></i> Düzenle</button>
+                        <button class="delete-btn"><i class="fas fa-trash"></i> Sil</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Mehmet Demir</td>
+                    <td>mehmet@example.com</td>
+                    <td>Pasif</td>
+                    <td>
+                        <button class="edit-btn"><i class="fas fa-edit"></i> Düzenle</button>
+                        <button class="delete-btn"><i class="fas fa-trash"></i> Sil</button>
+                    </td>
+                </tr>
+                <!-- Diğer kullanıcılar buraya eklenecek -->
+            </tbody>
+        </table>
+    </div>
+</main>

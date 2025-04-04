@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewData["Title"] = "TakimYönetimi";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Takım Yönetimi - Futbol Elo Sistemi</title>
+    <link rel="stylesheet" href="~/admin/css/admin-dashboard.css">
+    <link rel="stylesheet" href="~/admin/css/team-management.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<main class="main-content">
+    <header class="top-bar">
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Takım ara...">
+        </div>
+        <div class="user-menu">
+            <div class="notifications">
+                <i class="fas fa-bell"></i>
+                <span class="badge">3</span>
+            </div>
+            <div class="admin-profile">
+                <img src="../images/admin/admin-avatar.png" alt="Admin">
+                <span>Admin Adı</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="team-management-content">
+        <h3>Takım Listesi</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Takım Adı</th>
+                    <th>Kuruluş Yılı</th>
+                    <th>Durum</th>
+                    <th>İşlemler</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Galatasaray</td>
+                    <td>1905</td>
+                    <td>Aktif</td>
+                    <td>
+                        <button class="edit-btn"><i class="fas fa-edit"></i> Düzenle</button>
+                        <button class="delete-btn"><i class="fas fa-trash"></i> Sil</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Fenerbahçe</td>
+                    <td>1907</td>
+                    <td>Aktif</td>
+                    <td>
+                        <button class="edit-btn"><i class="fas fa-edit"></i> Düzenle</button>
+                        <button class="delete-btn"><i class="fas fa-trash"></i> Sil</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</main>

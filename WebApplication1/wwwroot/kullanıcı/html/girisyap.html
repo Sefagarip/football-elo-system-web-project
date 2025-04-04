@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Futbol Elo Puanı Takip Sistemi - Giriş Yap</title>
+  <link rel="stylesheet" href="../css/girisyap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Header (aynı yapı) -->
+    <header>
+      <div class="logo">
+        <h1>Futbol Elo Puanı Takip Sistemi</h1>
+        <div class="user-menu">
+          <div class="auth-buttons">
+            <a href="girisyap.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> Giriş Yap</a>
+            <a href="kayitol.html" class="register-btn"><i class="fas fa-user-plus"></i> Kayıt Ol</a>
+          </div>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html"><i class="fas fa-home"></i> Ana Sayfa</a></li>
+          <li><a href="takim.html"><i class="fas fa-trophy"></i> Takım Sıralaması</a></li>
+          <li><a href="futbolcu.html"><i class="fas fa-user"></i> Futbolcu Sıralaması</a></li>
+          <li><a href="karsilastirma.html"><i class="fas fa-chart-line"></i> Karşılaştırma</a></li>
+          <li><a href="elobelirle.html"><i class="fas fa-calculator"></i> Oyuncu Elo Belirle</a></li>
+          <li><a href="hakkinda.html"><i class="fas fa-info-circle"></i> Hakkında</a></li>
+          <li><a href="iletisim.html"><i class="fas fa-envelope"></i> Admin İletişim</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Body: Giriş Yap Formu -->
+    <div class="content-wrapper">
+      <div class="login-section">
+        <h2><i class="fas fa-sign-in-alt"></i> Giriş Yap</h2>
+        <p>Hesabınıza giriş yaparak Futbol Elo Puanı Takip Sistemini kullanmaya başlayın.</p>
+
+        <div class="login-options">
+          <button class="option-btn active" data-target="email-login">
+            <i class="fas fa-envelope"></i> Email ile Giriş
+          </button>
+          <button class="option-btn" data-target="social-login">
+            <i class="fas fa-users"></i> Sosyal Medya ile Giriş
+          </button>
+        </div>
+
+        <div class="login-panels">
+          <!-- Email ile Giriş Formu -->
+          <div class="login-panel active" id="email-login">
+            <form id="loginForm">
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Email adresiniz" required>
+              </div>
+              <div class="form-group password-field">
+                <label for="password">Şifre:</label>
+                <div class="password-container">
+                  <input type="password" id="password" name="password" placeholder="Şifreniz" required>
+                  <button type="button" class="toggle-password">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="form-options">
+                <div class="remember-me">
+                  <input type="checkbox" id="remember" name="remember">
+                  <label for="remember">Beni Hatırla</label>
+                </div>
+                <a href="#sifremi-unuttum" class="forgot-password">Şifremi Unuttum</a>
+              </div>
+              <button type="submit" class="submit-btn">Giriş Yap <i class="fas fa-sign-in-alt"></i></button>
+            </form>
+          </div>
+
+          <!-- Sosyal Medya ile Giriş -->
+          <div class="login-panel" id="social-login">
+            <div class="social-login-buttons">
+              <button class="social-btn google">
+                <i class="fab fa-google"></i> Google ile Giriş Yap
+              </button>
+              <button class="social-btn facebook">
+                <i class="fab fa-facebook"></i> Facebook ile Giriş Yap
+              </button>
+              <button class="social-btn twitter">
+                <i class="fab fa-twitter"></i> Twitter ile Giriş Yap
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="register-link">
+          Henüz hesabınız yok mu? <a href="kayitol.html">Hemen Kayıt Olun</a>
+        </div>
+
+        <div id="loginMessage" class="form-message"></div>
+      </div>
+    </div>
+
+    <!-- Footer (aynı yapı) -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="social-links">
+          <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="copyright">
+          2025 Futbol Elo Puanı Takip Sistemi. Tüm hakları saklıdır.
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="../js/girisyap.js"></script>
+</body>
+
+</html>

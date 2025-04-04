@@ -1,0 +1,61 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <h1>Futbol Elo Puanı Takip Sistemi</h1>
+                <div class="user-menu">
+                    <div class="auth-buttons">
+                        <a href="GirisYap" class="login-btn"><i class="fas fa-sign-in-alt"></i> Giriş Yap</a>
+                        <a href="KayitOl" class="register-btn"><i class="fas fa-user-plus"></i> Kayıt Ol</a>
+                    </div>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="AnaSayfa" class="active"><i class="fas fa-home" aria-label="Ana Sayfa"></i> Ana Sayfa</a></li>
+                    <li><a href="TakimSiralamasi"><i class="fas fa-trophy"></i> Takım Sıralaması</a></li>
+                    <li><a href="FutbolcuSiralamasi"><i class="fas fa-user"></i> Futbolcu Sıralaması</a></li>
+                    <li><a href="Karsilastirma"><i class="fas fa-chart-line"></i> Karşılaştırma</a></li>
+                    <li><a href="OyuncuEloBelirle"><i class="fas fa-calculator"></i> Oyuncu Elo Belirle</a></li>
+                    <li><a href="Hakkinda"><i class="fas fa-info-circle"></i> Hakkında</a></li>
+                    <li><a href="AdminIletisim"><i class="fas fa-envelope"></i> Admin İletişim</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+        @RenderBody()
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div class="copyright">
+                    2025 Futbol Elo Puanı Takip Sistemi. Tüm hakları saklıdır.
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

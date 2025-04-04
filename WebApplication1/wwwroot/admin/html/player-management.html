@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oyuncu Yönetimi - Futbol Elo Sistemi</title>
+    <link rel="stylesheet" href="../css/admin-dashboard.css">
+    <link rel="stylesheet" href="../css/player-management.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="../images/logo.png" alt="Logo" class="logo">
+                <h2>Admin Paneli</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="../html/admin-dashboard.html"><i class="fas fa-home"></i>Genel Bakış</a>
+                    </li>
+                    <li>
+                        <a href="../html/user-management.html"><i class="fas fa-users"></i>Kullanıcı Yönetimi</a>
+                    </li>
+                    <li>
+                        <a href="../html/team-management.html"><i class="fas fa-futbol"></i>Takım Yönetimi</a>
+                    </li>
+                    <li class="active">
+                        <a href="../html/player-management.html"><i class="fas fa-user-tie"></i>Oyuncu Yönetimi</a>
+                    </li>
+                    <li>
+                        <a href="../html/elo-calculations.html"><i class="fas fa-chart-line"></i>Elo Hesaplamaları</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Oyuncu ara...">
+                </div>
+                <div class="user-menu">
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="admin-profile">
+                        <img src="../images/admin/admin-avatar.png" alt="Admin">
+                        <span>Admin Adı</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <div class="player-management-content">
+                <h3>Oyuncu Listesi</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Oyuncu Adı</th>
+                            <th>Takım</th>
+                            <th>Yaş</th>
+                            <th>Durum</th>
+                            <th>İşlemler</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Arda Turan</td>
+                            <td>Galatasaray</td>
+                            <td>35</td>
+                            <td>Aktif</td>
+                            <td>
+                                <button class="edit-btn"><i class="fas fa-edit"></i> Düzenle</button>
+                                <button class="delete-btn"><i class="fas fa-trash"></i> Sil</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Mesut Özil</td>
+                            <td>Fenerbahçe</td>
+                            <td>34</td>
+                            <td>Aktif</td>
+                            <td>
+                                <button class="edit-btn"><i class="fas fa-edit"></i> Düzenle</button>
+                                <button class="delete-btn"><i class="fas fa-trash"></i> Sil</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/admin-dashboard.js"></script>
+</body>
+</html> 

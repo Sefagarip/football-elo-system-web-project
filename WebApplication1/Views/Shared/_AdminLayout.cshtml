@@ -1,0 +1,45 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Futbol Elo Sistemi</title>
+    <link rel="stylesheet" href="~/admin/css/admin-dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<aside class="sidebar">
+    <div class="sidebar-header">
+        <img src="~/images/adminLogo/adminlogo.jpg" alt="Logo" class="logo">
+        <h2>Admin Paneli</h2>
+    </div>
+    <nav class="sidebar-nav">
+        <ul>
+            <li class="active">
+                <a href="AnaSayfa"><i class="fas fa-home"></i>Genel Bakış</a>
+            </li>
+            <li>
+                <a href="KullaniciYönetimi"><i class="fas fa-users"></i>Kullanıcı Yönetimi</a>
+            </li>
+            <li>
+                <a href="TakimYönetimi"><i class="fas fa-futbol"></i>Takım Yönetimi</a>
+            </li>
+            <li>
+                <a href="OyuncuYönetimi"><i class="fas fa-user-tie"></i>Oyuncu Yönetimi</a>
+            </li>
+            <li>
+                <a href="EloHesaplamaları"><i class="fas fa-chart-line"></i>Elo Hesaplamaları</a>
+            </li>
+        </ul>
+    </nav>
+</aside>
+        <div>
+            @RenderBody()
+        </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="~/admin/js/admin-dashboard.js"></script>
+

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kullanıcı Yönetimi - Futbol Elo Sistemi</title>
+    <link rel="stylesheet" href="../css/admin-dashboard.css">
+    <link rel="stylesheet" href="../css/user-management.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sol Menü -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="..\..\images\adminLogo\adminlogo.jpg" alt="Logo" class="logo">
+                <h2>Admin Paneli</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="../html/admin-dashboard.html"><i class="fas fa-home"></i>Genel Bakış</a>
+                    </li>
+                    <li class="active">
+                        <a href="user-management.html"><i class="fas fa-users"></i>Kullanıcı Yönetimi</a>
+                    </li>
+                    <li>
+                        <a href="team-management.html"><i class="fas fa-futbol"></i>Takım Yönetimi</a>
+                    </li>
+                    <li>
+                        <a href="player-management.html"><i class="fas fa-user-tie"></i>Oyuncu Yönetimi</a>
+                    </li>
+                    <li>
+                        <a href="elo-calculations.html"><i class="fas fa-chart-line"></i>Elo Hesaplamaları</a>
+                    </li>
+   
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Ana İçerik -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Kullanıcı ara...">
+                </div>
+                <div class="user-menu">
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="admin-profile">
+                        <img src="../images/admin/admin-avatar.png" alt="Admin">
+                        <span>Admin Adı</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <div class="user-management-content">
+                <h3>Kullanıcı Listesi</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>İsim</th>
+                            <th>Email</th>
+                            <th>Durum</th>
+                            <th>İşlemler</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Ahmet Yılmaz</td>
+                            <td>ahmet@example.com</td>
+                            <td>Aktif</td>
+                            <td>
+                                <button class="edit-btn"><i class="fas fa-edit"></i> Düzenle</button>
+                                <button class="delete-btn"><i class="fas fa-trash"></i> Sil</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Mehmet Demir</td>
+                            <td>mehmet@example.com</td>
+                            <td>Pasif</td>
+                            <td>
+                                <button class="edit-btn"><i class="fas fa-edit"></i> Düzenle</button>
+                                <button class="delete-btn"><i class="fas fa-trash"></i> Sil</button>
+                            </td>
+                        </tr>
+                        <!-- Diğer kullanıcılar buraya eklenecek -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/admin-dashboard.js"></script>
+</body>
+</html> 

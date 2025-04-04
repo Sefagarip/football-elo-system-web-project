@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Futbol Elo Puanı Takip Sistemi - Takım Sıralaması</title>
+  <link rel="stylesheet" href="../css/takim.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <h1>Futbol Elo Puanı Takip Sistemi</h1>
+        <div class="user-menu">
+          <div class="auth-buttons">
+            <a href="girisyap.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> Giriş Yap</a>
+            <a href="kayitol.html" class="register-btn"><i class="fas fa-user-plus"></i> Kayıt Ol</a>
+          </div>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html"><i class="fas fa-home" aria-label="Ana Sayfa"></i> Ana Sayfa</a></li>
+          <li><a href="takim.html" class="active"><i class="fas fa-trophy"></i> Takım Sıralaması</a></li>
+          <li><a href="futbolcu.html"><i class="fas fa-user"></i> Futbolcu Sıralaması</a></li>
+          <li><a href="karsilastirma.html"><i class="fas fa-chart-line"></i> Karşılaştırma</a></li>
+          <li><a href="elobelirle.html"><i class="fas fa-calculator"></i> Oyuncu Elo Belirle</a></li>
+          <li><a href="hakkinda.html"><i class="fas fa-info-circle"></i> Hakkında</a></li>
+          <li><a href="iletisim.html"><i class="fas fa-envelope"></i> Admin İletişim</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="content-wrapper">
+      <!-- Sol Menü -->
+      <aside class="left-sidebar">
+        <nav class="country-nav">
+          <h3><i class="fas fa-globe"></i> Ülkeler</h3>
+          <ul class="country-list">
+            <li class="country-item">
+              <a href="#turkiye" class="country-link">
+                <span class="flag">🇹🇷</span>
+                <span class="name">Türkiye</span>
+                <i class="fas fa-chevron-right"></i>
+              </a>
+              <ul class="league-list">
+                <li><a href="#super-lig">Süper Lig</a></li>
+                <li><a href="#1-lig">1. Lig</a></li>
+              </ul>
+            </li>
+            <li class="country-item">
+              <a href="#ingiltere" class="country-link">
+                <span class="flag">🏴</span>
+                <span class="name">İngiltere</span>
+                <i class="fas fa-chevron-right"></i>
+              </a>
+              <ul class="league-list">
+                <li><a href="#premier-league">Premier League</a></li>
+                <li><a href="#championship">Championship</a></li>
+              </ul>
+            </li>
+            <!-- Diğer ülkeler -->
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Ana İçerik -->
+      <main class="main-content">
+        <div class="trends-container">
+          <section class="elo-trends">
+            <h2><i class="fas fa-building"></i> Takım Elo Değişim Trendi</h2>
+            <div class="trend-filters">
+              <select id="team-trend-period">
+                <option value="1m">Son 1 Ay</option>
+                <option value="6m">Son 6 Ay</option>
+                <option value="1y">Son 1 Yıl</option>
+              </select>
+            </div>
+            <!-- Canvas olarak düzenlendi -->
+            <div class="trend-chart">
+              <canvas id="teamEloTrendChart"></canvas>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <!-- Sağ Bölüm -->
+      <aside class="right-sidebar">
+        <div class="quick-stats">
+          <h2><i class="fas fa-chart-simple"></i> En Yüksek Elo Puanları</h2>
+          <div class="team-list active">
+            <div class="team-item">
+              <div class="team-info">
+                <img src="assets/images/teams/manchester-city.png" alt="Manchester City" loading="lazy">
+                <span class="team-name">Manchester City</span>
+              </div>
+              <span class="team-elo">2150</span>
+            </div>
+            <div class="team-item">
+              <div class="team-info">
+                <img src="assets/images/teams/real-madrid.png" alt="Real Madrid" loading="lazy">
+                <span class="team-name">Real Madrid</span>
+              </div>
+              <span class="team-elo">2130</span>
+            </div>
+            <div class="team-item">
+              <div class="team-info">
+                <img src="assets/images/teams/bayern.png" alt="Bayern Münih" loading="lazy">
+                <span class="team-name">Bayern Münih</span>
+              </div>
+              <span class="team-elo">2110</span>
+            </div>
+            <div class="team-item">
+              <div class="team-info">
+                <img src="assets/images/teams/psg.png" alt="PSG" loading="lazy">
+                <span class="team-name">PSG</span>
+              </div>
+              <span class="team-elo">2090</span>
+            </div>
+            <div class="team-item">
+              <div class="team-info">
+                <img src="assets/images/teams/liverpool.png" alt="Liverpool" loading="lazy">
+                <span class="team-name">Liverpool</span>
+              </div>
+              <span class="team-elo">2080</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Footer Eklendi -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="social-links">
+          <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="copyright">
+          2025 Futbol Elo Puanı Takip Sistemi. Tüm hakları saklıdır.
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../js/takim.js"></script>
+</body>
+
+</html>

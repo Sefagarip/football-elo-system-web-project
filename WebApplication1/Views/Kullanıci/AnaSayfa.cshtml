@@ -1,0 +1,104 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_KullanıciLayout.cshtml";
+
+}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/kullanıcı/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<main class="home-content">
+    <!-- Hoş Geldiniz Bölümü -->
+    <section class="welcome-section">
+        <h1>Futbol Elo Puanı Takip Sistemine Hoş Geldiniz</h1>
+        <p>Takımların ve oyuncuların performanslarını Elo puanlama sistemi ile takip edin.</p>
+        <div class="search-box">
+            <input type="text" placeholder="Takım veya oyuncu ara...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </section>
+
+    <!-- Öne Çıkan İstatistikler -->
+    <section class="featured-stats">
+        <div class="stat-card">
+            <i class="fas fa-trophy"></i>
+            <h3>En Yüksek Elo</h3>
+            <p>Manchester City</p>
+            <span>2150 puan</span>
+        </div>
+        <div class="stat-card">
+            <i class="fas fa-chart-line"></i>
+            <h3>En Çok Yükselen</h3>
+            <p>Real Madrid</p>
+            <span>+45 puan</span>
+        </div>
+        <div class="stat-card">
+            <i class="fas fa-futbol"></i>
+            <h3>Son Maçlar</h3>
+            <p>125 maç</p>
+            <span>Bu hafta</span>
+        </div>
+    </section>
+
+    <!-- Hızlı Erişim Menüsü -->
+    <section class="quick-access">
+        <h2>Hızlı Erişim</h2>
+        <div class="quick-links">
+            <a href="takim.html" class="quick-link-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Takım İstatistikleri</h3>
+                <p>Takımların Elo puanlarını ve sıralamalarını görüntüleyin</p>
+            </a>
+            <a href="futbolcu.html" class="quick-link-card">
+                <i class="fas fa-user"></i>
+                <h3>Oyuncu İstatistikleri</h3>
+                <p>Oyuncuların performans verilerini inceleyin</p>
+            </a>
+            <a href="karsilastirma.html" class="quick-link-card">
+                <i class="fas fa-chart-bar"></i>
+                <h3>Karşılaştırma</h3>
+                <p>Takım ve oyuncuları karşılaştırın</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Son Maçlar -->
+    <section class="recent-matches">
+        <h2>Son Maçlar</h2>
+        <div class="match-list">
+            <div class="match-card">
+                <div class="team home">
+                    <img src="../images/teams/manchester-city.png" alt="Manchester City">
+                    <span>Manchester City</span>
+                </div>
+                <div class="score">
+                    <span>3 - 1</span>
+                    <small>90'</small>
+                </div>
+                <div class="team away">
+                    <img src="../images/teams/liverpool.png" alt="Liverpool">
+                    <span>Liverpool</span>
+                </div>
+            </div>
+            <div class="match-card">
+                <div class="team home">
+                    <img src="../images/teams/real-madrid.png" alt="Real Madrid">
+                    <span>Real Madrid</span>
+                </div>
+                <div class="score">
+                    <span>2 - 0</span>
+                    <small>90'</small>
+                </div>
+                <div class="team away">
+                    <img src="../images/teams/barcelona.png" alt="Barcelona">
+                    <span>Barcelona</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="~/kullanıcı/js/index.js"></script>
+</main>
+

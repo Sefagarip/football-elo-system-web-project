@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Futbol Elo Puanı Takip Sistemi - Karşılaştırma</title>
+  <link rel="stylesheet" href="../css/karsilastirma.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <h1>Futbol Elo Puanı Takip Sistemi</h1>
+        <div class="user-menu">
+          <div class="auth-buttons">
+            <a href="girisyap.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> Giriş Yap</a>
+            <a href="kayitol.html" class="register-btn"><i class="fas fa-user-plus"></i> Kayıt Ol</a>
+          </div>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html"><i class="fas fa-home" aria-label="Ana Sayfa"></i> Ana Sayfa</a></li>
+          <li><a href="takim.html"><i class="fas fa-trophy"></i> Takım Sıralaması</a></li>
+          <li><a href="futbolcu.html"><i class="fas fa-user"></i> Futbolcu Sıralaması</a></li>
+          <li><a href="karsilastirma.html" class="active"><i class="fas fa-chart-line"></i> Karşılaştırma</a></li>
+          <li><a href="elobelirle.html"><i class="fas fa-calculator"></i> Oyuncu Elo Belirle</a></li>
+          <li><a href="hakkinda.html"><i class="fas fa-info-circle"></i> Hakkında</a></li>
+          <li><a href="iletisim.html"><i class="fas fa-envelope"></i> Admin İletişim</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="comparison-content">
+      <!-- Karşılaştırma Türü Seçimi -->
+      <div class="comparison-type">
+        <button class="type-btn active" data-type="team">
+          <i class="fas fa-shield-alt"></i> Takım Karşılaştırması
+        </button>
+        <button class="type-btn" data-type="player">
+          <i class="fas fa-user"></i> Oyuncu Karşılaştırması
+        </button>
+      </div>
+
+      <!-- Karşılaştırma Seçim Alanı -->
+      <div class="comparison-selection">
+        <div class="selection-container">
+          <!-- Sol Seçim -->
+          <div class="selection-box">
+            <h3>1. Seçim</h3>
+            <div class="search-box">
+              <input type="text" id="search1" placeholder="Takım/Oyuncu ara...">
+              <div class="search-results" id="results1"></div>
+            </div>
+            <div class="selected-item" id="selected1">
+              <div class="placeholder">Henüz seçim yapılmadı</div>
+            </div>
+          </div>
+
+          <!-- VS İşareti -->
+          <div class="vs-container">
+            <span class="vs-text">VS</span>
+          </div>
+
+          <!-- Sağ Seçim -->
+          <div class="selection-box">
+            <h3>2. Seçim</h3>
+            <div class="search-box">
+              <input type="text" id="search2" placeholder="Takım/Oyuncu ara...">
+              <div class="search-results" id="results2"></div>
+            </div>
+            <div class="selected-item" id="selected2">
+              <div class="placeholder">Henüz seçim yapılmadı</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Karşılaştırma Sonuçları -->
+      <div class="comparison-results">
+        <!-- Elo Puan Grafiği -->
+        <div class="elo-chart-container">
+          <h3><i class="fas fa-chart-line"></i> Elo Puan Değişimi</h3>
+          <div class="trend-filters">
+            <select id="comparison-period">
+              <option value="1m">Son 1 Ay</option>
+              <option value="6m">Son 6 Ay</option>
+              <option value="1y">Son 1 Yıl</option>
+            </select>
+          </div>
+          <div class="trend-chart" id="comparisonChart">
+            <!-- Grafik buraya gelecek (Canvas kullanılabilir) -->
+          </div>
+          <!-- İstatistikler için isteğe bağlı bir grid eklenmişse; örn: -->
+          <div id="statsGrid"></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer Eklendi -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="social-links">
+          <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="copyright">
+          2025 Futbol Elo Puanı Takip Sistemi. Tüm hakları saklıdır.
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../js/karsilastirma.js"></script>
+</body>
+
+</html>

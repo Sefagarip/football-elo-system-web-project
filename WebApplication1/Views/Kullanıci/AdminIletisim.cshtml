@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewData["Title"] = "AdminIletisim";
+    Layout = "~/Views/Shared/_KullanıciLayout.cshtml";
+}
+<head>
+    <title>Admin İletişim</title>
+    <link rel="stylesheet" href="~/kullanıcı/css/iletisim.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Body: Admin İletişim Formu -->
+        <div class="content-wrapper">
+            <div class="admin-contact-section">
+                <h2><i class="fas fa-envelope"></i> Admin İletişim</h2>
+                <p>Lütfen admin ile iletişime geçmek için aşağıdaki formu doldurun.</p>
+                <form id="adminContactForm">
+                    <div class="form-group">
+                        <label for="name">Ad Soyad:</label>
+                        <input type="text" id="name" name="name" placeholder="Adınız ve Soyadınız" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Email adresiniz" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Konu:</label>
+                        <input type="text" id="subject" name="subject" placeholder="Mesaj konunuz" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mesaj:</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Mesajınız" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Gönder <i class="fas fa-paper-plane"></i></button>
+                </form>
+                <div id="formMessage" class="form-message"></div>
+            </div>
+        </div> 
+    </div>
+    <script src="~/kullanıcı/js/iletisim.js"></script>
+</body>
+
+
+
+
+

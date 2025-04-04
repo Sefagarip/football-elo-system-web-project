@@ -1,0 +1,116 @@
+﻿
+@{
+    ViewData["Title"] = "AnaSayfa";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!-- Ana İçerik -->
+<main class="main-content">
+    <!-- Üst Bar -->
+    <header class="top-bar">
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Arama yapın...">
+        </div>
+        <div class="user-menu">
+            <div class="notifications">
+                <i class="fas fa-bell"></i>
+                <span class="badge">3</span>
+            </div>
+            <div class="admin-profile">
+                <img src="../images/admin/admin-avatar.png" alt="Admin">
+                <span>Admin Adı</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dashboard İçeriği -->
+    <div class="dashboard-content">
+        <!-- İstatistik Kartları -->
+        <div class="stat-cards">
+            <div class="stat-card">
+                <div class="stat-icon blue">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-details">
+                    <h3>Toplam Kullanıcı</h3>
+                    <p>1,234</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon green">
+                    <i class="fas fa-futbol"></i>
+                </div>
+                <div class="stat-details">
+                    <h3>Toplam Takım</h3>
+                    <p>156</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon orange">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <div class="stat-details">
+                    <h3>Toplam Oyuncu</h3>
+                    <p>3,789</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon purple">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <div class="stat-details">
+                    <h3>Toplam Maç</h3>
+                    <p>892</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grafikler -->
+        <div class="charts-container">
+            <div class="chart-card">
+                <h3>Aylık Kullanıcı Artışı</h3>
+                <div class="chart" id="userGrowthChart"></div>
+            </div>
+            <div class="chart-card">
+                <h3>En Yüksek Elo Puanları</h3>
+                <div class="chart" id="topEloChart"></div>
+            </div>
+        </div>
+
+        <!-- Son Aktiviteler -->
+        <div class="recent-activities">
+            <h3>Son Aktiviteler</h3>
+            <div class="activity-list">
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <i class="fas fa-plus-circle"></i>
+                    </div>
+                    <div class="activity-details">
+                        <p>Yeni kullanıcı kaydı: Ahmet Yılmaz</p>
+                        <span>2 dakika önce</span>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <div class="activity-details">
+                        <p>Takım bilgileri güncellendi: Galatasaray</p>
+                        <span>15 dakika önce</span>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <div class="activity-details">
+                        <p>Elo hesaplaması yapıldı: Fenerbahçe vs Beşiktaş</p>
+                        <span>1 saat önce</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
